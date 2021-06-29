@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/*ブラウザ版*/
+body {
+    font-family: 'Sawarabi Mincho', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+}
+.main_skill {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.title {
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 5rem;
+}
+.about {
+    opacity: 0.7;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+.container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 100px 0;
+    padding: 30px;
+}
+.item {
+    width:350px;
+    height: 350px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #dddddd;
+    border-radius: 10px;
+}
+.item h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+.item h5 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+.description {
+    opacity: 0.7;
+    margin:0 12px;
+}
+/*フェードインアニメーション*/
+/*一瞬表示されることを防ぐ*/
+.scrollanime {
+    opacity:  0;
+}
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.downup {
+    transform: translateY(100px);
+}
+
+/*レスポンシブ*/
+@media(max-width:896px) {
+    .title {
+        padding-bottom: 30px;
+        font-size: 3rem;
+    }
+    .about {
+        font-size: 1.5rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .item {
+        width: 250px;
+    }
+    .item h5 {
+        margin-bottom: 15px;
+    }
+}

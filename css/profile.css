@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/*ブラウザ版*/
+body {
+    font-family: 'Sawarabi Mincho', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+}
+.main_profile {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.main_profile img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+.title {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 5rem;
+}
+.about {
+    opacity: 0.7;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+.profile_txt {
+    opacity: 0.7;
+    padding-right: 200px;
+}
+.profile_txt ul {
+    
+    padding-bottom: 50px;
+    line-height: 4;
+}
+.profile_txt li {
+    list-style: none;
+}
+.now {
+    margin-bottom: 70px;
+}
+.now h4 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 20px 0;
+}
+.hereafter {
+    margin-bottom: 70px;
+}
+.hereafter h4 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 20px 0;
+}
+
+/*フェードインアニメーション*/
+/*一瞬表示されることを防ぐ*/
+.scrollanime {
+    opacity:  0;
+}
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.updown {
+    transform: translateY(-30px);
+}
+
+/*レスポンシブ*/
+@media(max-width:896px) {
+    .title {
+        padding-bottom: 30px;
+        font-size: 3rem;
+    }
+    .about {
+        font-size: 1.2rem;
+    }
+    .profile_txt {
+        padding: 0 20px;
+    }
+}
